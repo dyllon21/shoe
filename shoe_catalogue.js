@@ -1,40 +1,45 @@
 // imgSlide();
 // alert(Handlebars)
 var shoes = [{
-        color: "red",
-        price: 400,
+        color: "black&gold/suede",
+        price: 900,
         in_stock: 6,
-        brand: "Puma",
-        size: 7
+        brand: "Adidas",
+        size: 7,
+        Source : "imageOne"
     },
     {
-        color: "blue",
-        price: 300,
+        color: "black/brown-stripes",
+        price: 700,
         in_stock: 7,
         brand: "Adidas",
-        size: 6
+        size: 6,
+        Source2 : "imageTwo"
     },
     {
-        color: "black",
-        price: 900,
+        color: "blue/white-stripes",
+        price: 750,
         in_stock: 8,
-        brand: "Sketchers",
-        size: 5
+        brand: "Adidas",
+        size: 5,
+        Source3: "imageThree"
     },
     {
-        color: "brown/black",
-        price: 500,
+        color: "white/black-stripes",
+        price: 1300,
         in_stock: 5,
-        brand: "Catapillar",
-        size: 4
+        brand: "Adidas",
+        size: 4,
+        Source4: "imageFour"
     },
     {
 
           color: "suede",
           price: 1500,
           in_stock: 8,
-          brand: "Jordan",
-          size: 6
+          brand: "Adidas",
+          size: 6,
+          Source5 :'imageFive'
     },
 ];
 
@@ -54,6 +59,11 @@ var shoes = [{
 // }
 
 //generate handlebars templates
+var Source = document.getElementById('imageOne').innerHTML;
+var Source2 = document.getElementById('imageTwo').innerHTML;
+var Source3 = document.getElementById('imageThree').innerHTML;
+var Source4 = document.getElementById('imageFour').innerHTML;
+var Source5 = document.getElementById('imageFive').innerHTML;
 var source = document.getElementById('colorList').innerHTML;
 var source2 = document.getElementById('sizeList').innerHTML;
 var source3 = document.getElementById('brandList').innerHTML;
@@ -62,6 +72,11 @@ var template2 = Handlebars.compile(source2);
 var template3 = Handlebars.compile(source3);
 
 //get comboboxes
+var img = document.getElementById("image1");
+var img2 = document.getElementById("image2");
+var img3 = document.getElementById('image3');
+var img4 = document.getElementById('image4');
+var img5 = document.getElementById('image5');
 var selectedColor = document.getElementById('selectColor');
 var selectedSize = document.getElementById('selectSize');
 var selectedBrand = document.getElementById('selectBrand');
@@ -106,7 +121,7 @@ function populateElements() {
 searchButton.addEventListener('click', function() {
     //clear unordered list
     ul.innerHTML = "";
-    //get values from respective functions
+    //get values from functions
     var inStock = checkForStock();
     var getPrice = checkForPrice();
 
@@ -131,6 +146,7 @@ searchButton.addEventListener('click', function() {
         price: getPrice,
         size: selectedSize.value,
         color: selectedColor.value
+
     }];
 
 
@@ -240,8 +256,8 @@ var closeModal = document.querySelector('.close');
 var form = document.querySelector('.addingData');
 var successForm = document.querySelector('.success');
 var successBTN = document.getElementById('successBTN');
-// var errorAlert = document.querySelector('.errorAlert');
-// var errorMessage = document.getElementById('errorMessage');
+var errorAlert = document.querySelector('.errorAlert');
+var errorMessage = document.getElementById('errorMessage');
 
 //show modal
 showModalBTN.addEventListener('click', function() {
@@ -293,7 +309,7 @@ function validations() {
 
     if (addedStock.value === "" || isNaN(addedStock.value) === true) {
         return error
-        errorMessage.innerHTML = 'Stock Value Not A Number or Is Empty. Please Try Again!';
+      errorMessage.innerHTML = 'Stock Value Not A Number or Is Empty. Please Try Again!';
         return true;
     } else {
         return false;

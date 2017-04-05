@@ -140,7 +140,6 @@ h1 {
 h5 {
     text-align: center;
     color: white;
-
 }
 
 h3 {
@@ -188,7 +187,6 @@ h3 {
     color: black;
     border-radius: 50px;
     background-color: white;
-
     box-shadow: 0.5px 0.5px 0.5px 0.8px silver;
 }
 
@@ -239,11 +237,11 @@ h3 {
 
 .button:hover {
     background-color: #fafafa;
-    color: #207cca;
+    color: #ffffff;
 }
 
 #searchBTN {
-    position:inherit;
+    position: inherit;
     margin: 0px -40px;
     background-color: lightblue;
     color: #fff000;
@@ -271,18 +269,18 @@ h3 {
 }
 
 @keyframes clipMe {
-  0% {
-	opacity: 0;
-    transform: rotate3d(0,1,0,180deg);
-  }
-	50%{
-		opacity: 1;
-	}
-	100% {
-		opacity: 1;
-		transform: rotate3d(0,1,0,0deg);
-	}
-  }
+    0% {
+        opacity: 0;
+        transform: rotate3d(0, 1, 0, 180deg);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+        transform: rotate3d(0, 1, 0, 0deg);
+    }
+}
 
 .container2 {
     position: absolute;
@@ -290,13 +288,14 @@ h3 {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0,0,0,0.8);
+    background: rgba(0, 0, 0, 0.8);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 200%;
     width: 100%;
     display: none;
+    background-color: lightblue;
 }
 
 .activeModal {
@@ -305,8 +304,12 @@ h3 {
 }
 
 @keyframes modalAnim {
-    0%, 50% {background-color: rgba(0,0,0,0);}
-    100% {background-color: rgba(0,0,0,0.9);}
+    0%, 50% {
+        background-color: rgba(0, 0, 0, 0);
+    }
+    100% {
+        background-color: rgba(0, 0, 0, 0.9);
+    }
 }
 
 .inactiveModal {
@@ -315,22 +318,26 @@ h3 {
 }
 
 @keyframes inactiveModalAnim {
-    0% {background-color: rgba(0,0,0,9)}
-    100% {background-color: rgba(0,0,0,0.0); transform: translateY(-200%)}
+    0% {
+        background-color: rgba(0, 0, 0, 9)
+    }
+    100% {
+        background-color: rgba(0, 0, 0, 0.0);
+        transform: translateY(-200%)
+    }
 }
 
-
 .addingData {
-	display: flex;
+    display: flex;
     justify-content: center;
-	align-items: center;
-	width: 500px;
-	height: 350px;
+    align-items: center;
+    width: 500px;
+    height: 350px;
     margin: -350px 0;
-	box-shadow: 0px 23px 30px -20px rgba(0,0,0,0.4);
-	border-radius: 0.1em;
-	position: absolute;
-	transition: 1s ease-in-out;
+    box-shadow: 0px 23px 30px -20px rgba(0, 0, 0, 0.4);
+    border-radius: 0.1em;
+    position: absolute;
+    transition: 1s ease-in-out;
     background-color: #fff;
     transform: translate(-200%);
 }
@@ -341,13 +348,19 @@ h3 {
 }
 
 @keyframes formAnim {
-    0%, 15% {transform: translateX(-200%) rotate(90deg);}
-    85%, 100%{ transform: translateX(0%)}
+    0%, 15% {
+        transform: translateX(-200%) rotate(90deg);
+    }
+    85%, 100% {
+        transform: translateX(0%)
+    }
 }
 
 .inactiveForm {
     animation: inactiveFormAnim 500ms ease-in-out forwards;
 }
+
+
 /*
 @keyframes inactiveFormAnim {
    0%, 15% {transform: translateX(0%) }
@@ -356,12 +369,12 @@ h3 {
 
 .addingData>table {
     position: absolute;
-    font-family:cursive;
+    font-family: cursive;
     width: 400px;
     margin: 0;
 }
 
-.addingData>table tr td:nth-child(1){
+.addingData>table tr td:nth-child(1) {
     text-align: right;
     height: 30px;
     box-sizing: border-box;
@@ -378,10 +391,11 @@ h3 {
     position: absolute;
     margin: 140px 10px;
     background-color: #4BABBD;
-	color: #fff;
-	width: 150px;
-	height: 30px;
-    border: 1px solid #4BABBD;
+    color: #000000;
+    width: 100px;
+    height: 20px;
+    border-radius: 50px;
+    border: 1px dotted #4BABBD;
     cursor: pointer;
     -webkit-box-shadow: 1px 1px 1px 1px grey;
     -moz-box-shadow: 1px 1px 1px 1px grey;
@@ -393,13 +407,14 @@ h3 {
 
 #addBTN:hover {
     background-color: #000000;
-	color: #fff000;
-	width: 80px;
+    color: #fff000;
+    width: 80px;
     border: 2px dotted #39698A;
+    border-radius: 50px;
     cursor: pointer;
-    -webkit-transition: 100ms ease-in-out;
-    -moz-transition: 100ms ease-in-out;
-    transition: 100ms ease-in-out;
+    -webkit-transition: 50ms ease-in-out;
+    -moz-transition: 50ms ease-in-out;
+    transition: 50ms ease-in-out;
 }
 
 .close {
@@ -426,15 +441,26 @@ h3 {
     margin: -150px 0;
 }
 
+
 /*
 /*.success {
     *display: flex;
     /*transform: translate(-200%);*/
-    /* justify-content: center;*/
-    /*align-items: center;*/
-    /*width: 50px;*/
-    /*height: 50px;*/
-   /*margin: -350px 0;*    box-shadow: 0px 23px 30px -20px rgba(0, 0, 0, 0.4);
+
+
+/* justify-content: center;*/
+
+
+/*align-items: center;*/
+
+
+/*width: 50px;*/
+
+
+/*height: 50px;*/
+
+
+/*margin: -350px 0;*    box-shadow: 0px 23px 30px -20px rgba(0, 0, 0, 0.4);
     border-radius: 0.1em;
     position: absolute;
     transition: 1s ease-in-out;
@@ -465,7 +491,15 @@ h3 {
 }
 
 @keyframes flipOut {
-    0%, 60% {transform: translateX(-100%)}
-    80% {transform: translateX(0%) scale(1.5); opacity: 1;}
-    100% {transform: translateX(0%) scale(1); opacity: 1;}
+    0%, 60% {
+        transform: translateX(-100%)
+    }
+    80% {
+        transform: translateX(0%) scale(1.5);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(0%) scale(1);
+        opacity: 1;
+    }
 }
