@@ -17,6 +17,16 @@ html, body {
 	justify-content: center;
 }
 
+
+/*.shoeDetails{
+  font-weight: bold;
+  font-family: cursive;
+  text-align: center;
+  color: red;
+  font-size: 40px;
+  width: 85%;
+}*/
+
 .navBar>ul li {
     display: inline-block;
     margin-left: 100px;
