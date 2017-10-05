@@ -5,51 +5,26 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="shoe_catalogue.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
   <title><em>Shoe</em> <em>API</em></title>
-  <!-- <link rel="stylesheet" href="shoe_catalogue.css" /> -->
 </head>
-
 <body class="container" align='center'>
   <h1><em>DYLLON'S</em> <em>SHOEWEAR</em><sup>&reg;</sup></h1>
-  <!-- <div class="navBar">
-    <ul>
-      <li>
-        <input type="button" id="modalActive" value="Add Stock Here" />
-      </li>
-    </ul>
-  </div> -->
-  <!-- <div class="modal">
-
-  </div> -->
   <hr>
-  <!-- <button type="button" id="add">Add Shoes</button> -->
-  <!-- <h3><em>Top</em> <em>five</em> <em>Shoe</em> <em>in</em> <em>stock</em>: <sup>&reg;</sup></h3>
-  <div class="imagesPopping">
-    <img id="imageOne" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAGQAZAMBIgACEQEDEQH/xAAcAAEAAgIDAQAAAAAAAAAAAAAABQYEBwIDCAH/xAA/EAABAwMBAwcGCwkAAAAAAAABAAIDBAURBhIhMQcTMkFRYdEicYGhosEVM0JDVGKRkrHC0xQXJCVTY3KC8P/EABYBAQEBAAAAAAAAAAAAAAAAAAABAv/EABYRAQEBAAAAAAAAAAAAAAAAAAARAf/aAAwDAQACEQMRAD8A3iiIgIiICIiAiIgIiICIiAiIgIiICIiAijbxfLfZTTfCM/NCpk5thxkA4zk9g4b+8LPiljmjbLC9skbhlr2HII7ig5oiICIiAiIgIiIOiWtpYaqKllqYWVEoJjic8BzwOOBxK71qLV7KfU1zuMkwI5h3MUzwN4DCQeHa7aP2Kqw6l1fpsltPdZXwN+bqRzzPa8oeYEIseh1jXK4Ulro5Ky4VEdPTxjLpHnA83ee4bytDScr2q3RbHO21h/qMpTtet5HqVQvmorpe5RJdrhPVvHR5xwDW+ZoAaPQAiLJyha0Opr02aj24qKnj5uBr8bRycuf3Z8nd9UKMo7zdrRV0U1DcXzOhkDwInktwX4wQOAcANx37xkZwq9G57RlvTd0e4dq5UdZNSP24XyxOYMCSNxB/7wUVvXSvK5bLiXRX5kVtkGAyUPLo354dXk+nd3rY0E0VTBHPBI2SKRoex7TkOad4IXkpj6eSmbBsNjJPx7eOAHYBHncMnsaMDdvnrHf77ZqmeSw18z6WEl72gExOaAXZLDwBxvO49WckBKPTaKu6S1ha9SUUBhqoGV5jBmpNvD2OxvwDvc3PWFYlUEREBERB5Vudyq2XOsMdTK3M8h6X1iompq6ioOZ5Xv8AOVs69ckl3nrqmooK+3uillc9jZnSMIaSSAcNKhZOSfUrT8faj5qiT9NaFDLl9hj23Fzh5I9Z7FdP3WaiLgOetmT/AH5P013P5Nr9BGI2Ot738BiZ2M9vRWdopEhIfzbTmR3SPZ3eK+7Qa3d0W8O8q3R8m2oIA4yspXOPW2fO70gLg/k41MXh76SBzB0WNqG+/CkWqpHkZPy38e4LmHNkfuwGjrwp+TQmqhtCKzyPz0nCoiP511O0VqiNmwLNOc8SJIz+ZXM01CukLpNsHBBBaRxGOCtti5SNUWfZY24ftkDfmq0c7u/yyHev0KNZonVDuFln+/GPzLKpeT7VM3StrYR1GWpj9ziVpGxrTy1W6QNZd7XUU7uBfTuErfOQcEejKuFo17pe7vbHSXeBsrzstinzE4nsAcBn0ZWm6fks1BK4GWe3Qt6yZnuP2BnvU1Q8kDSf5he9ph4sgpse05x/BIN3ooKyNZZ7VTW5k81QynYGMkqH7TyBwyQB+CLIk5IHYwwZHVvWBNR1LidmLP8AsFMorSK0+21xO6D22+K4i21/0f22+Ks6JUitfBtd9H9tviuwUFZ8qA/eb4qwolIrxpKoNIEDxkdSxnUFS1uG08h79lWpEpFPFvrc5/Z5cdmFkR2+tOP4d/pIHvVoRKRARWysO4tYwfWd4LKjtUny5wO5rVKolViRUELG4O049pKLLRQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERB//2Q=="
-    />
-    <img id="imageTwo" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRn2LRoQ_yLhamSMfMgFF18USFoyNeqpje4KfbcfR88z00nVjGgiQ" />
-    <img id="imageThree" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAGQAZAMBIgACEQEDEQH/xAAbAAEAAQUBAAAAAAAAAAAAAAAAAQIDBAYHBf/EADMQAAEDAgMFBQcFAQAAAAAAAAEAAgMEEQUSIQYxQVFxBxNSYZEUIjJCgZKhFSNTctEz/8QAFgEBAQEAAAAAAAAAAAAAAAAAAAEC/8QAFhEBAQEAAAAAAAAAAAAAAAAAABEB/9oADAMBAAIRAxEAPwDsqIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIvIxXaOgwrGsJwqqL/aMUe9kJaNG5Rvd1JAHmV66AiITYEncEBFh1Da+rwuR+HyxU9S5zTE6ZmZuUEXBHmLjyurtIax8Y9qgjjkG/I+7Sgvopsdd+ihAREQEREBERBwLtjx2om20gZA4MZhrWmB7HAkvvcuuOTm2t5Hmuj7Jdo+F4vQxfqcrKSssBJmH7bjzB4dD6ledhPZhs458lXiDKmtnnf3rjNMWgEm5Fm2v9brLqeyvZ2RxfRGroXHW0M2Zvo660jd4KunqY+8ppGzM8ULg8fhRI98rSyONzSfmdpZeDstsbh+zsrqhsktXVuGUTThvuN5NAGnXetlvyRE2JaA51uioqJ20sElRUPY2KJhe97jlytGpKSSd2zNYk7gOZXKO0jaWavr2bMYQXTyulaKox695Lf3Yh5N4+fQoOi4HtPhWOsk9gne+SMAvjljLCy+4E2t+V7D2tcA65F+I1WoUkdJ2e7IF85bJVH4jf/vORo0cbD8AErx+zamxLFK2pxmrqqltMXus1sjmtmkOpJaDbKL7ufRB0UsOlvrcqmx103Gy0yfbGsk2sGE4PBBVRF4hzyA3JF87sw+VuvDgeYW7kvaNWZv6n/bKKtIqgQ91ix7T5hTk80i1Qik6FQoPNpRkJi4sJbvG4HT8LOZdYWZj6mVuhIdYgrJYxnhb6LbK/ryU68lbyN8LfRTkbyHog1rtBxfEsMwfLguHVlVXzXbHLBTukFOOLyQDrroOevBa52V7IOwmB20ONxuZVvaTCye4MEZ+J7r7nHXfqB1NukZRf/CluTj9xQcXxXEq7tG21iw3DhJFh1PcNLhbu4wfelcOZ0AH9Rpqt422x6j2O2dp8Lw0iGomj7unaPiijHxPPnroeZvwK3L3v5HLEq8LoK54fW0VJUuAtmnp2PNvqFBrPZfs/7Dh/6tVx5amrYBC0jWOHh0zaHpZbySFZBdzH2o5+VuZ7w1o4nRUXC7ToqS8BYMmLUDCR7YyQj5YjnPo26pZXulP7FJMR4ntyoM0uJ1AUI0ktBcLHkizcUcxrvia025hR3bPA30VSKKgMaNzR6Jlb4R6KUQRlb4R6Jlb4R6KUQUmKM742Hq0KO4h/ij+0KtEFo01O74oIj1YFApKUHMKaEEcRGFeRAGgsNB5IiICIiAiIgIiICIiAiIgIiICIiAiIg//Z"
-    />
-    <img id="imageFour" src="data:image/jpeg;base64,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"
-    />
-    <img id="imageFive" src="data:image/jpeg;base64,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"
-    />
-  </div> -->
   <center>
-    <input class="btn btn-primary" id="btn" type="button" name="" value="Show All Shoes" align="right">
+    <div class="showBtn">
+      <input class="btn btn-primary" id="btn" onclick="showAllShoes()" type="button" name="" value="Show All Shoes"</input>
+    </div>
+    <script id='shoeStock' type="text/handlebars-x">
 
-    <!-- <form name="user_info" action="" method="get"> -->
-
-    <script class="template" type="text/handlebars-x">
-
-      <table class="tab" border="1px">
+      <table class="tab" border="1px" align="center">
         <tbody>
           <thead>
             <tr>
-              <th colspan="5">Stock avalailable</th>
+              <th colspan="7">Stock avalailable</th>
             </tr>
             <tr>
               <th>Shoe ID</th>
@@ -61,25 +36,22 @@
             </tr>
           </thead>
           {{#each shoeDetails}}
-
           <tr>
             <th>{{_id}}</th>
             <td>{{Brand}}</td>
             <td>{{Color}}</td>
-            <td>{{Price}}</td>
-            <td>R {{Size}}.00</td>
+            <td>{{Size}}</td>
+            <td>R {{Price}}.00</td>
             <td>{{InStock}}</td>
             {{/each}}
           </tr>
       </table>
 
     </script>
-    <br>
-
   </center>
-<br>
-
-  <form class="addForm">
+  <br>
+  <div id="Results"></div>
+  <!-- <form class="addForm">
     <hr>
     <h4>Add new <em>shoes</em> to the catalogue</h4>
     <input class="brand" type="text" placeholder="Brand"><br>
@@ -88,80 +60,20 @@
     <input class="inStock" type="text" placeholder="Number of stock"><br><br>
     <input class="btn btn-primary" id="btn" type="button" name="" value="Add Shoe" align="right">
     <hr>
-  </form>
-
-  <div id="shoeDetails">
-
-  </div>
-
-  <!-- <h3> <em>Search</em> <em>desired</em> <em>sneaker</em>:<sup>&reg;</sup></h3>
-  <hr> -->
-  <!-- <div id="searchContainer">
-    <div class="searchForm">
-      <table id="#search">
-        <tr>
-          <td>
-            <label><em>Brand</em>:</label>
-          </td>
-          <td>
-            <select id="selectBrand">
-						<script src="shoe_catalogue.js" type="text/x-handlebars-some-template" id="brandList">
-							<option name="brand">{{brand}}</option>
-						</script>
-					</select>
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <label><em>Color</em>: </label>
-          </td>
-          <td>
-            <select id="selectColor">
-						<script src="shoe_catalogue.js" type="text/x-handlebars-some-template" id="colorList">
-							<option name="color">{{color}}</option>
-						</script>
-						</select>
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <label><em>Size</em>: </label>
-          </td>
-
-          <td>
-            <select id="selectSize">
-						<script src="shoe_catalogue.js" type="text/x-handlebars-some-template" id="sizeList">
-							<option name="size">{{size}}</option>
-						</script>
-					</select>
-          </td>
-        </tr>
-
-      </table>
-      <div class="Button">
-        <!-- <button onclick="Search();">Search</button> -->
-  <!-- <input type="button" value="Search" id="searchBTN" />
-      </div>
-    </div>
-  </div>  -->
-  <!-- <hr>
-  <h3><em>Results</em>:</h3>
-  <div class="display">
+  </form> -->
+  <!-- <h3><em>Results</em>:</h3>  <div class="display">
     <div class="searchResults">
       <ul class="ul">
         <script src="shoe_catalogue.js" type="text/x-handlebars-some-template" id="outputItems">
-          <li><b><em>Brand</em> <em>Name</em></b> {{brand}}</li>
+          <li><b><em>Brand</em> <em>Name</em></b> {{Brand}}</li>
           <li><b><em>In</em> <em>Stock</em></b> {{InStock}}</li>
-          <li><b><em>Price</em> </b> R{{price}}</li>
-          <li><b><em>Shoe</em> <em>Size</em></b> {{size}}</li>
-          <li><b><em>Shoe</em> <em>Color</em></b> {{color}}</li>
+          <li><b><em>Price</em> </b> R{{Price}}</li>
+          <li><b><em>Shoe</em> <em>Size</em></b> {{Size}}</li>
+          <li><b><em>Shoe</em> <em>Color</em></b> {{Color}}</li>
         </script>
       </ul>
     </div>
   </div> -->
-
   <!--
   <div class="container">
     <div class="addingData">
@@ -214,52 +126,48 @@
   <!-- <p id="errorMessage"></p> -->
   <!-- </div> -->
   <!-- </div> -->
+  <form name="info" action="index.html" method="get">
 
-  <!-- <div class="success">
-      <h3 id="successHeading"><em>Congrats!!</em>!</h3>
-      <! <div id="successIMG"></div>
-      <input type="button" id="successBTN" value="Goodluck!!" />
-    </div>
-  </div>
-  <hr> -->
-  <script type="text/javascript" src="handlebars-v4.0.5.js"></script>
-  <script type="text/javasrcipt" src="../shoe_catalogue/shoe_catalogue.js" charset="utf-8"></script>
+  <h3>Choose shoe color:</h3>
+  <input type="undefined" list="colors" placeholder="Shoe color" id="colorDrop">
+  <datalist id="colors">
+    <option select value = "All Colors"></option>
+    <option value = "suede"></option>
+    <option value = "lightBlue"></option>
+    <option value = "Blue"></option>
+    <option value = "Black"></option>
+    <option value = "White"></option>
+    <option value = "pink"></option>
+    <option value = "purple"></option>
+  </datalist>
 
+  <h3>Choose shoe size</h3>
+  <input type="text" list="sizes" placeholder="Shoe size" id="sizeDrop">
+  <datalist id="sizes">
+    <option value = "3"></option>
+    <option value = "4"></option>
+    <option value = "5"></option>
+    <option value = "6"></option>
+    <option value = "7"></option>
+    <option value = "8"></option>
+    <option value = "9"></option>
+    <option value = "10"></option>
+  </datalist>
+</form>
+  <br>
+  <br>
+  <input class="btn btn-primary" id="btn2" onclick="search()" type="button" name="" value="Search Stock"</input>
+  <hr>
+  </hr>
+  <!-- <div id="stockInfo">
+  </div> -->
 </body>
+<script type="text/javascript" src="handlebars-v4.0.5.js"></script>
+<script src="shoe_catalogue.js" charset="utf-8"></script>
 
 </html>
-<!--
-<body align=left>
-  <script type="text/x-handlebars-template" class = "stockTemplate">
-    <table>
-      <thead>
-        <th>brand</th>
-        <th>color</th>
-        <th>size</th>
-        <th>quantity</th>
-        <th>price</th>
-      </thead>
-      <tbody>
-        <td>{{shoeBrand}}</td>
-        <td>{{shoeColor}}</td>
-        <td>{{shoeSize}}</td>
-        <td>{{quantity}}</td>
-        <td>{{shoePrice}}</td>
-      </tbody>
-    </table>
-  </script>
-  <div id = "header">
-    <h1>Dyllon's shoeWear</h1>
-  </div>
-  <div id = "slideShow">
-  <img src = "data:image/jpeg;base64,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" width = '200' height = '250' class = 'slides'>
-  <img src = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAF8AXwMBIgACEQEDEQH/xAAbAAEAAgMBAQAAAAAAAAAAAAAAAwQBAgUGB//EADEQAAICAQIEAwYGAwEAAAAAAAECAAMRBCEFEjFBE1FhBiNxgZGhIjJCscHwYuHxFP/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A+4xEQEREBERAREQEREBERAREQETzvtBxyzgiXat1NtasqBM4AyQM/X95S4L7V2a3WVi8L4Nuy8o3B7QPXxKtusQbVkO3pIDq7AvMzKuegxzf8gdGJHRaLF7cw6iSQEREBERATWxuRGY9hmbSnxXUV6bSFrc8rMFyBnGYHB9oOFjjfCdRomtNVluCtmM8pDBunymPZv2f03A9MK0dr7j+a2wbn0A7D0+5nRptSxQUYMPMHMmYhULN0EgjvqBBYdRvtK6X2sviUoxcdVYYDfHP7j7y3XalmQDItRQW5SjshBzlT1gS1XLYy2JYVtXcpy9vI+kv6a8XqTgqynBU9ROKil73Wqp0dRtbsAdvPOflLIZlas2sxtU4FiA4zjuOw+co68StRqSwPjqKznbfII88ywrKwypBHoYGYiICUeIsOZEbBVuxGxl6VdXpfG3BIPpA5baCktzVZqb/AAmW8alfeJ4tfcj+/wB85k6XW0WMyulgIGzDB+sjW7V1J7zT8xDfocHIz64kE+lNFg56CD5+Yk5X6SqlNGqY2V81Vo6kDB+ksV16hfwuUcefQmBkqGQqy5VhgjzE206VaapaqKVrrXoqKAB8puA5/SPr/qalXOd0HzJ/iAs1PIvYfE5+0qJxKptQlfKviMfwkkDeQ66q91xVeiju3Jkj5ZkXDuEOWFgcue9thyT8MfxKPRUWC2sMN+20kkdFQprCrv5mSQEREB1mhqQ9Vm8QK9mjqcHYg+YODIbNNqQVNNykKdw6/m28xL0QOHq240litp9LpmUZBzad/tOTrX9prLfcf+fTqevuy5P1nsogeI0vs/xK/UDUcT1j2EHIToM/AbT0Oi0NlDfgcidaIGFzjfrMxEBERAREQEREBERAREQERED/2Q==' width = '300' height = '250' class = 'slides'>
-  <img src = 'data:image/jpeg;base64,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' width = '200' height = '250' class = 'slides'>
-  <img src = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAFoAiAMBIgACEQEDEQH/xAAcAAEAAwEBAQEBAAAAAAAAAAAABQYHBAIDCAH/xAA4EAABAwMCAwcBBwIHAQAAAAABAgMEAAURBiESMUEHEyJRYXGBkRQyQmKhscFy8SRDRFOCwtEj/8QAGAEBAAMBAAAAAAAAAAAAAAAAAAECAwT/xAAgEQEBAAICAQUBAAAAAAAAAAAAAQIRAyESBBMiMUEU/9oADAMBAAIRAxEAPwDcaUpQKUpQKUpQKUpQKUpQKUpQKUpQKUpQKUpQKUpQKUpQKUpQKUpQKh9VXgWSzuyk8PfHwtBXLiPX43PxUxWYdpkxx+4KZBwzDSAP61DiJ+hT7b1pxY+WchXDC7RbrFyqQuNKaJzh1PAr4UNsfBqZtfac3InssToSWGXFBJcS4TwZ67jlWTt3BDrio6XFq4k8fEF5CsHHzX3bYUgpLR58gOSvbyPp16Y69t4OOzcVlfpJpxDraXGlpWhQylSTkEeYNe6wqxa4naasbsKIhD/FIDkUupKkIbJytJwR1xgfmz542axXNq8WqNOZSUB1OVIPNCuoPsa4M8LjdLO+lKVUKUpQKUpQfzNREXU9mlzzBj3BlcjPCE5ICj5A8j8VQO0fU837W/bo76mY7R4FIaBBWfzEb49Nh71n0ZTgWFpaeKgc5Sgn9t66cPT+U3ajaav/AGn3yLrq4sRphbtseWphLJQkgBHgJ5dVAq+a9QNQ3d5yTLVPld44+pQUh1QBG3TOMeQqtPQbXJmKkPtOqfUriUjjUCs+ortkXFMZIbTwtKSPAgfg9T61txcNl+RtoEHVt23t7M1P2hz/AFD6O87tfUAZGRtg+ud6skbVUpy5htTUf7Iw0ftJTxd4VcwU9AOeQfrWT6XcCrmHFrTwttqUUjn5f9qkGby203c5gUShxZQ30+6MDHuTVeTix8tSG2uQNTQpUYPSMxApRCA6R4h0ORsPY77VmHandYy5L3dvJKFkHKN+IAAfxXNHu4lQrdbLf/iJjyk4aO+FEEnPtk59BV1OkYCWUIegsy1AAFcgBRV8chWdw9vuH2w5K4ySh1DzXGCVDOQQTz9P7VarelqRCIJBGOY86ttw0VYpuULtsdpZ/FGc7tQ+Af4qvzdIXGxtuLtZXLj8y0vZ1A9uSv396tx83j1UWI1hBYlEFXCFbk42J8/Q+frWxdniUt2NbSVKKkvq4uJOMHA2rLoqESWCp9eEhByTzFaP2dSy9Fd7wFKnsLAPXACSfk71b1F3h0mLnSlK4klKUoFKUoMa7UGvsd1kOHIS4oLyNtincnz/ALVQm3znwqyOhBO/61r3a7bS9EjTEEJCcoWT7ZH81ibDFxlyS3abfIljiwVoQSMjzPIV28XPMZ8lal2QFnIyk+aVYrncDbSjwpGc8/Opu16K1PN4S+3AgpPNJdKl/QcQ/WrDZuztUG5olXO4iUEeJLKWuFIPmTnKvbb1rb+nD8iNVSLfAus9alW2O+Uq8JWjwIPn4jgVMQtBzJCwJUtprf7rQLiv4A/WtNcYYSBnKsDZJ2B+lQl01FbrS04p50FYGQyzgqIx9APU4FZ+9lfpbSEkaen6ZiLlaYJckFBS+tWFPBJOwQAMD16nAqpi+6qeld21cLgp8k4b77c/8TVqtsy/63kPsWXMGGDh59RPhyORV02/CnxHbJAO13t3Zzp2LaRCmFct8niXKU4ULKvygHCU+Sd/XJ3rDk1v5XsZOvWOrLWcXHviknGJ0Xwq9AcDP1q0aY7Qosx5iLPjrjOOKCElpXG2T7HdPPpXDqm4yNI3t62RnH58NtKFD7ZurBHRaU8um4PKq1JlwHXDJsolRn1KJdaSpYz/AElB9+dJw2/qWo3rTbVwWl+KUtqUrjU3+FdR+nbm5bLuESAUutq4FJWcYSSMnHtXHpDWSFsJh3Ra23kbJcc4jkeuRz+atM2BBvSUYVxOI3bfbIJT/wCj0pZcOr9C8sPNvsodZWFoWMpUDzr6VW9HMSIbciLIIKUkKQpJ2PmfTptVkrCzVClKVAUpSgidSWpm7QUtSElSG1hwpB+9gHb9ary48S3RQXnWYsVA8KQQhKRVqubjqIroYbC3O7VwpJwFHGwr8/ams2tbwt6ddoamWWt0pceRgeiUgnerQXC7dpNktaSi3hU50f7fhQPdR5/GahHe0C7vMLW9CaiqWUlpa8gJSff7xPT9jUBpuwRlRHZU+S4h5B8LTLALo9eJYKR8A+9W61m329pbtvt+JhzmRJV3rpzz8R5ewwK0x6u6K2+5qW4oW4t51uM4SQ9IcLSV4G5AI4iPQJwa4bHFtwmcV5U7LbSvCY6CUNq8io5yfbb5q5Lst21C+HO7ccPLiB2FWO29mLKQlc2Svi6pRj96vlyWj7267MpiNMQWmWY6E4babRwpSPIAV3JmOK8j7CpKJpW3Q0AIazw9VqJr293MdJQ2lCceQrHoVa/w7PcGc3q3R3+FOAtxOFpHoseIfBrJtTQbLGeUi0CSgA8lqDqfjiBP61q2pkLlju87ZqqnTzS1ZWnJqZkM0L0sjhU0h1I2HGk/sDipvTlyvUF8GEe7yfukKCf0q9xdNMKUOFkKPtVtsmkG8ha0BtPoKmcmUEloeXMlRCqcloOcI2aJI+c1aa54cNiE13cdHCOvrXRWdu6FKUqApSlB5UkKGFDIqCmaYYl96FyXuBw5KTgip+lBVG9C29H+c5jyAAqRg6YtcPlHDp83MGpqlTseG20NJCGkJQkcgkYFe6UqB5WkKSQeoqNetRUolDg386lKUFZl2CQ6rIKPrXhnTDmf/qtAHpvVppQR8K0xonJIUrzIqQAxSlApSlApSlB//9k=' width = '200' height = '250' class = 'slides'>
-  <img src = 'data:image/jpeg;base64,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' width = '200' height = '250' class = 'slides'>
-  </div>
-  <hr>
-  <div id = "stock">
+
+<!-- <div id = "stock">
     <h3>Choose shoe brand:</h3>
     <input type = "text" list = "brands" placeholder = "Shoe brand" id = "brandDrop">
     <dataList id = "brands">
@@ -268,41 +176,4 @@
       <option value = "Catapillar"></option>
       <option value = "Cavellas"></option>
       <option value = "Sketchers"></option>
-    </datalist>
-
-    <h3>choose your desired color:</h3>
-    <input type = "text" list = "colors" placeholder="Shoe color" id = "colorDrop">
-     <datalist id = "colors">
-       <option select value = "All Colors"></option>
-      <option value = "Red"></option>
-      <option value = "Violet"></option>
-      <option value = "Blue"></option>
-      <option value = "Black"></option>
-      <option value = "White"></option>
-    </datalist>
-
-<h3>Choose shoe size</h3>
-<input type="text" list = "sizes" placeholder = "Shoe size" id = "sizeDrop">
-<datalist id = "sizes">
-  <option value = "3"></option>
-  <option value = "4"></option>
-  <option value = "5"></option>
-  <option value = "6"></option>
-  <option value = "7"></option>
-  <option value = "8"></option>
-</datalist>
-<br>
-<hr>
-<button id = "orderBtn" value = "searchShoes()">Search Stock</button>
-</hr>
-<button id = "showAll" value = "showAllStock()">show all stock</button>
-
-</div>
-<div id = "stockInfo">
-</div>
-
-<h3>We have the size and color in stock!</h3>
-</body>
-<script src = "shoe_catalogue.js" charset="utf-8"></script>
-
-</html> -->
+    </datalist> -->

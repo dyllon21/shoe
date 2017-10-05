@@ -1,57 +1,52 @@
-//
-// function imgSlide() {
-//   'use strict';
-//   var mySlides = document.getElementsByClassName('slides');
-//   for (var i = 0; i < mySlides.length; i++) {
-//     mySlides[i].style.display = 'none';
-//   }
-//   slider++;
-//   if (slider > mySlides.length) {
-//     slider = 1;
-//   }
-//   mySlides[slider - 1].style.display = 'inline-block';
-//   setTimeout(imgSlide, 2000);
-// }
-
+//calling data with jQuery AJAX call:
 
 //generate handlebars templates
-// var source = document.getElementById('colorList').innerHTML;
-// var source2 = document.getElementById('sizeList').innerHTML;
-// var source3 = document.getElementById('brandList').innerHTML;
-// var template = Handlebars.compile(source);
-// var template2 = Handlebars.compile(source2);
-// var template3 = Handlebars.compile(source3);
-
-//calling data with jQuery AJAX call:
-$(function() {
-  //compiling all handlebars templates:
-  var all = document.getElementById('btn');
-  var template = document.getElementsByClassName('template');
-  var shoeDetails = document.getElementById('shoeDetails');
+var color = document.getElementById('colorDrop').innerHTML;
+var size = document.getElementById('sizeDrop').innerHTML;
+//compiling all handlebars templates:
+var template = Handlebars.compile(color);
+var template2 = Handlebars.compile(size);
 
 
-  var myTemplate = Handlebars.compile(template.innerHTML);
-  //function to show all shoes is happening via the following:
-console.log('hhhhhh');
-  var showAllShoes = function() {
-    var url = 'http://localhost:3001/api/shoes';
-    $.get(url)
-      .then(function(results) {
-        console.log(url);
-        var ApiResults = results;
-        console.log(results);
-        var shoeInfo = myTemplate({
-          shoeDetails: ApiResults
-        });
-        shoeDetails.innerHTML = shoeInfo;
-      });
-  };
+//function to show all shoes:
+function showAllShoes() {
+  $.ajax({
+    url: 'http://localhost:3001/api/shoes',
+    type: 'GET'
+  }).done(function(results) {
+      var template = document.querySelector('#shoeStock').innerHTML;
+      var myTemplate = Handlebars.compile(template);
+      result = myTemplate({shoeDetails:results.shoes});
+      document.getElementById('Results').innerHTML = result;
+  });
+};
 
-  showAllShoes();
-  all.addEventListener("click", showAllShoes);
-})();
+//function to displ shoe's price and number of shoes InStock.
+function search(){
+  $.ajax({
+    url: 'http://localhost:3001/api/shoes/color/size/' + color.value + size.value,
+    type: 'GET'
+  }).done(function(results){
+    var template = document.querySelector('#shoeStock').innerHTML;
+    var myTemplate = Handlebars.compile(template);
+    result = myTemplate({shoeDetails:{color} + {size}});
+    document.getElementById('Results').innerHTML = result;
 
+  });
+  color = color.value,
+  size = size.value
+};
 
+// $.ajax({
+//   url: 'http://localhost:3001/api/shoes/sold/59d398a6066d9312ead03ed9',
+//   type: 'POST'
+// }).done(function(results) {
+//   // var result = myTemplate()
+//   // console.log(template);
+//   // var shoeDetails = document.getElementById('shoeDetails');
+//   console.log(results);
+// });
+// };
 
 
 
