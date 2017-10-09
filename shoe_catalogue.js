@@ -1,11 +1,10 @@
 //calling data with jQuery AJAX call:
 
 //generate handlebars templates
-var color = document.getElementById('colorDrop').innerHTML;
-var size = document.getElementById('sizeDrop').innerHTML;
+
 //compiling all handlebars templates:
-var template = Handlebars.compile(color);
-var template2 = Handlebars.compile(size);
+// var sourceResults = document.getElementById('outputItems').innerHTML;
+// var templateResults = Handlebars.compile(sourceResults);
 
 
 //function to show all shoes:
@@ -14,41 +13,130 @@ function showAllShoes() {
     url: 'http://localhost:3001/api/shoes',
     type: 'GET'
   }).done(function(results) {
-      var template = document.querySelector('#shoeStock').innerHTML;
-      var myTemplate = Handlebars.compile(template);
-      result = myTemplate({shoeDetails:results.shoes});
-      document.getElementById('Results').innerHTML = result;
+    var template = document.querySelector('#shoeStock').innerHTML;
+    var myTemplate = Handlebars.compile(template);
+
+    result = myTemplate({
+      shoeDetails: results.shoes
+    });
+    document.getElementById('Results').innerHTML = result;
   });
 };
 
 //function to displ shoe's price and number of shoes InStock.
-function search(){
+function shoeBrandAndSize() {
+  var selectedSize = document.getElementById('sizeSelect').value;
+  var selectedBrand = document.getElementById('brandSelect').value;
+
   $.ajax({
-    url: 'http://localhost:3001/api/shoes/color/size/' + color.value + size.value,
+    url: 'http://localhost:3001/api/shoes/brand/' + selectedBrand + '/size/' + selectedSize,
     type: 'GET'
-  }).done(function(results){
+  }).done(function(results) {
+    console.log(results);
+
     var template = document.querySelector('#shoeStock').innerHTML;
     var myTemplate = Handlebars.compile(template);
-    result = myTemplate({shoeDetails:{color} + {size}});
+
+    result = myTemplate({
+      shoeDetails: results.brandAndSize
+    });
     document.getElementById('Results').innerHTML = result;
 
   });
-  color = color.value,
-  size = size.value
 };
 
-// $.ajax({
-//   url: 'http://localhost:3001/api/shoes/sold/59d398a6066d9312ead03ed9',
-//   type: 'POST'
-// }).done(function(results) {
-//   // var result = myTemplate()
-//   // console.log(template);
-//   // var shoeDetails = document.getElementById('shoeDetails');
-//   console.log(results);
-// });
+function shoeBrand(){
+  var selectedBrand = document.getElementById('brandSelect').value;
+
+  $.ajax({
+    url: "http://localhost:3001/api/shoes/brand/" + selectedBrand,
+    type: "GET"
+  }).done(function(results){
+    console.log(results);
+    var template = document.querySelector('#shoeStock').innerHTML;
+    var myTemplate = Handlebars.compile(template);
+
+    result = myTemplate({
+      shoeDetails: results.brand
+    });
+    document.getElementById('Results').innerHTML = result;
+
+  });
+};
+function shoeSize(){
+  var selectedSize = document.getElementById('sizeSelect').value;
+
+  $.ajax({
+    url: "http://localhost:3001/api/shoes/size/" + selectedSize,
+    type: "GET"
+  }).done(function(results) {
+    console.log(results);
+    var template = document.querySelector('#shoeStock').innerHTML;
+    var myTemplate = Handlebars.compile(template);
+
+    result = myTemplate({
+      shoeDetails: results.size
+    });
+    document.getElementById('Results').innerHTML = result;
+
+  });
+};
+
+//needs attention:
+function sold() {
+  var objectID = document.getElementById('IDselect').value;
+// console.log(shoeID);
+console.log(objectID);
+  $.ajax({
+    url: 'http://localhost:3001/api/shoes/sold/' + objectID,
+    type: 'POST'
+  }).done(function(results) {
+
+    var template = document.querySelector('#shoeStock').innerHTML;
+    var myTemplate = Handlebars.compile(template);
+
+    result = myTemplate({
+      shoeDetails: results.selling
+    });
+    document.getElementById('Results').innerHTML = result;
+  });
+};
+
+  //
+  // $(".addStock").submit(function(e) {
+  //   var url = "http://localhost:3001/api/shoes"; // the script where you handle the form input.
+  //
+  //   $.ajax({
+  //     type: "POST",
+  //     url: url,
+  //     data: $(".addStock").serialize(), // serializes the form's elements.
+  //     success: function(data) {
+  //       allShoes();
+  //     }
+  //   });
+  //   e.preventDefault(); // avoid to execute the actual submit of the form.
+  // });
+
+
+//  function filter(evt){
+//   if (filter === 'filterBtn') {
+//     var sizeFilter = document.querySelector('.sizeFilter');
+//     var brandFilter = document.querySelector('.brandFilter');
+//
+//     var selectedBrand = brandFilter.value;
+//     var selectedSize = sizeFilter.value;
+//
+//     if(selectedBrand && ! selectedSize) {
+//       brandFilter(selectedBrand);
+//     }else if(selectedSize && !selectedBrand){
+//     sizeFilter(selectedSize);
+//   }else if(selectedBrand && selectedSize){
+//     filterSizeBrand(selectedBrand, selectedSize)
+//   }
+//   brandFilter.value = "";
+//    sizeFilter.value = "";
+//   }
 // };
-
-
 
 //get comboboxes
 // var selectedColor = document.getElementById('selectColor');
