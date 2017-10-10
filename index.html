@@ -1,6 +1,5 @@
 <!doctype html>
 <html>
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,76 +7,34 @@
   <link rel="stylesheet" href="shoe_catalogue.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
   <title><em>Shoe</em> <em>API</em></title>
 </head>
+
 <body class="container" align='center'>
   <h1><em>DYLLON'S</em> <em>SHOEWEAR</em><sup>&reg;</sup></h1>
   <hr>
-  <center>
-    <div class="showBtn">
-      <input class="btn btn-primary" id="btn" onclick="showAllShoes()" type="button" name="" value="Show All Shoes"</input>
-    </div>
-    <script id='shoeStock' type="text/handlebars-x">
-
-      <table class="" border="1px" align="center">
-        <tbody>
-          <thead>
-            <tr>
-              <th colspan="7">Stock avalailable</th>
-            </tr>
-            <tr>
-              <th>Shoe ID</th>
-              <th>Brand</th>
-              <th>Color</th>
-              <th>Size</th>
-              <th>Price</th>
-              <th>InStock</th>
-            </tr>
-          </thead>
-          {{#each shoeDetails}}
-          <tr>
-            <th>{{_id}}</th>
-            <td>{{Brand}}</td>
-            <td>{{Color}}</td>
-            <td>{{Size}}</td>
-            <td>R {{Price}}.00<br>
-            <input class="btn btn-success" id="IDselect" onclick="sold()" type="button" name="" value="Buy"</input></td>
-            <td>{{InStock}}</td>
-            {{/each}}
-            </tr>
-      </table>
-    </script>
-  </center>
-  <!-- <br> -->
-  <form class="addForm">
-    <hr>
-    <h4>Add new <em>shoes</em> to the catalogue</h4>
-    <label>
-    <input class="brand" type="text" placeholder="Brand"><br>
-    <input class="color" type="text" placeholder="color"><br>
-    <input class="size" type="number" placeholder="size"><br>
-    <input class="id" type="number" placeholder="ID"><br>
-    <input class="price" type="number" placeholder="price"><br>
-    <input class="inStock" type="number" placeholder="Amount in Stock"><br><br>
-    <input class="btn btn-primary" id="btn" type="button" name="" value="Add Shoe" align="right">
-  </label>
-</form>
-  <!-- <h3><em>Results</em>:</h3>  <div class="display">
-    <div class="searchResults">
-      <ul class="ul">
-        <script src="shoe_catalogue.js" type="text/x-handlebars-some-template" id="outputItems">
-          <li><b><em>Brand</em> <em>Name</em></b> {{Brand}}</li>
-          <li><b><em>In</em> <em>Stock</em></b> {{InStock}}</li>
-          <li><b><em>Price</em> </b> R{{Price}}</li>
-          <li><b><em>Shoe</em> <em>Size</em></b> {{Size}}</li>
-          <li><b><em>Shoe</em> <em>Color</em></b> {{Color}}</li>
-        </script>
-      </ul>
-    </div>
-  </div> -->
-  <hr>
-  </div>
+  <br>
+  <label>
+  <div class="container">
+         <div class="row">
+             <div class="col-sm-4">
+                 <form class="form-group jumbotron" method="post">
+                   <h3><b>Add New Stock Here</b></h3>
+                     <input class="form-control" id="brand" type="text" name="brand" value="" placeholder="brand">
+                     <br>
+                     <input class="form-control" id="color" type="text" name="color" value="" placeholder="color">
+                     <br>
+                     <input class="form-control" id="size" type="text" name="size" value="" placeholder="size">
+                     <br>
+                     <input class="form-control" id="inStock" type="text" name="inStock" value="" placeholder="Instock">
+                     <br>
+                     <input class="form-control" id="price" type="text" name="price" value="" placeholder="price">
+                     <br>
+                     <button class='submit btn btn-success' type="button" name="button">Add Stock</button> |
+                     <input class="btn btn-primary" id="btn" onclick="showAllShoes()" type="button" name="" value="Show All Shoes"</input>
+                 </form>
+             </div>
+           </label>
   <label>
   <h3>Choose Brand:</h3>
   <input id="brandSelect" type="undefined" list="brands" placeholder="Brand">
@@ -93,7 +50,8 @@
   </datalist>
   <input class="btn btn-success" id="Btn" onclick="shoeBrand()" type="button" name="" value="filter"</input></td>
 </label>
-<label>
+
+  <label>
   <h3>Choose Size</h3>
   <input id="sizeSelect" type="undefined" list="sizes" placeholder="Size">
   <datalist id="sizes">
@@ -110,11 +68,68 @@
   </datalist>
   <input class="btn btn-success" id="Btn" onclick="shoeSize()" type="button" name="" value="filter"</input></td>
 </label>
-</form>
-  <br>
-  <br>
+  </form>
 
-  <input class="btn btn-primary" id="btn2" onclick="shoeBrandAndSize()" type="button" name="" value="Search Stock"</input>
+  <br>
+  <center>
+    <div class="display">
+      <script id='shoeStock' type="text/handlebars-x">
+        <table id="myTable" class="table table-bordered table-striped">
+          <tr>
+            <th>Brand</th>
+            <th>Color</th>
+            <th>Size</th>
+            <th>InStock</th>
+            <th>Price</th>
+          </tr>
+          {{#each shoeDetails}}
+          <tr>
+            <td>{{Brand}}</td>
+            <td>{{Color}}</td>
+            <td>{{Size}}</td>
+            <td>{{InStock}}</td>
+            <td>R {{Price}}.00
+              <button value={{_id}} class="btn btn-success">Purchase</button></td>
+          </tr>
+          {{/each}}
+        </table>
+      </script>
+    </div>
+    <!-- <div class="display">
+    <script id='shoeStock' type="text/handlebars-x">
+
+    <table class="" border="1px" align="center">
+    <tbody>
+    <thead>
+    <tr>
+    <th colspan="7">Stock avalailable</th>
+  </tr>
+  <tr>
+  <th>Shoe ID</th>
+  <th>Brand</th>
+  <th>Color</th>
+  <th>Size</th>
+  <th>Price</th>
+  <th>InStock</th>
+</tr>
+</thead>
+{{#each shoeDetails}}
+<tr>
+<th>{{_id}}</th>
+<td>{{brand}}</td>
+<td>{{clor}}</td>
+<td>{{size}}</td>
+<td>R {{price}}.00<br>
+<input class="btn btn-success" id="IDselect" onclick="sold()" type="button" name="" value="Buy"</input></td>
+<td>{{InStock}}</td>
+{{/each}}
+</tr>
+</table>
+</script>
+</div> -->
+  </center>
+
+  <input class="btn btn-primary" id="btn2" onclick="shoeBrandAndSize()" type="button" name="" value="Search Stock" </input>
   <hr>
   </hr>
   <div id="Results"></div>
