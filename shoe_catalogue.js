@@ -3,7 +3,7 @@
 //function to show all shoes:
 function showAllShoes() {
   $.ajax({
-    url: 'http://localhost:3001/api/shoes',
+    url: 'https://localhost:5000/api/shoes',
     type: 'GET'
   }).done(function(results) {
     //compiling handlebars templates:
@@ -13,7 +13,7 @@ function showAllShoes() {
     result = myTemplate({
       shoeDetails: results.shoes
     });
-    document.getElementById('Results').innerHTML = result;
+    document.getElementById('results').innerHTML = result;
   });
 };
 
@@ -23,7 +23,7 @@ function shoeBrandAndSize() {
   var selectedBrand = document.getElementById('brandSelect').value;
 
   $.ajax({
-    url: 'http://localhost:3001/api/shoes/brand/' + selectedBrand + '/size/' + selectedSize,
+    url: 'https//localhost:5000/api/shoes/brand/' + selectedBrand + '/size/' + selectedSize,
     type: 'GET'
   }).done(function(results) {
     //compiling handlebars templates:
@@ -41,7 +41,7 @@ function shoeBrand() {
   var selectedBrand = document.getElementById('brandSelect').value;
 
   $.ajax({
-    url: "http://localhost:3001/api/shoes/brand/" + selectedBrand,
+    url: "https://localhost:5000/api/shoes/brand/" + selectedBrand,
     type: "GET"
   }).done(function(results) {
     //compiling handlebars templates:
@@ -59,7 +59,7 @@ function shoeSize() {
   var selectedSize = document.getElementById('sizeSelect').value;
 
   $.ajax({
-    url: "http://localhost:3001/api/shoes/size/" + selectedSize,
+    url: "https://localhost:5000/api/shoes/size/" + selectedSize,
     type: "GET"
   }).done(function(results) {
     //compiling handlebars templates:
@@ -83,7 +83,7 @@ $('.submit').on('click', function() {
         InStock: document.querySelector('#inStock').value
       }
       $.ajax({
-        url: 'http://localhost:3001/api/shoes/',
+        url: 'https://localhost:5000/api/shoes/',
         type: 'POST',
         data: shoes,
         success: function(err, result) {
@@ -595,5 +595,3 @@ $('.submit').on('click', function() {
     // }
     //
     // });
-
-    
