@@ -13,7 +13,7 @@ function showAllShoes() {
     result = myTemplate({
       shoeDetails: results.shoes
     });
-    document.getElementById('results').innerHTML = result;
+    document.getElementById('Results').innerHTML = result;
   });
 };
 
