@@ -1,5 +1,6 @@
 <!doctype html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -81,20 +82,27 @@
             <th>Size</th>
             <th>InStock</th>
             <th>Price</th>
+            <td></td>
           </tr>
           {{#each shoeDetails}}
-          <tr>
-            <td>{{Brand}}</td>
-            <td>{{Color}}</td>
-            <td>{{Size}}</td>
-            <td>{{InStock}}</td>
-            <td>R {{Price}}.00
-              <button value={{_id}} class="btn btn-success">Purchase</button></td>
+          <tr class="content" data-type="data">
+            <td class="td active" style="border-radius: 5px">{{Brand}}</td>
+            <td class="td active" style="border-radius: 5px">{{Color}}</td>
+            <td class="td active" style="border-radius: 5px">{{Size}}</td>
+            <td class="td active" style="border-radius: 5px">{{InStock}}</td>
+            <td class="td active" style="border-radius: 5px"> R {{Price}}.00 <br>
+            <div class=" popup col-1">
+              <form class=" form-group" method="post">
+                <td><button value={{_id}} class=" btn btn-success">Purchase</button></td>
+              </form>
           </tr>
           {{/each}}
         </table>
       </script>
     </div>
+    </div>
+    </div>
+
     <!-- <div class="display">
     <script id='shoeStock' type="text/handlebars-x">
 
@@ -132,9 +140,9 @@
   <input class="btn btn-primary" id="btn2" onclick="shoeBrandAndSize()" type="button" name="" value="Search Stock" </input>
   <hr>
   </hr>
+
   <div id="Results"></div>
-  <!-- <div id="stockInfo">
-  </div> -->
+
 </body>
 <script type="text/javascript" src="handlebars-v4.0.5.js"></script>
 <script src="shoe_catalogue.js" charset="utf-8"></script>
