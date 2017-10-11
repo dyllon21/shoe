@@ -23,7 +23,7 @@ function shoeBrandAndSize() {
   var selectedBrand = document.getElementById('brandSelect').value;
 
   $.ajax({
-    url: 'http//localhost:5000/api/shoes/brand/' + selectedBrand + '/size/' + selectedSize,
+    url: 'http://localhost:5000/api/shoes/brand/' + selectedBrand + '/size/' + selectedSize,
     type: 'GET'
   }).done(function(results) {
     //compiling handlebars templates:
